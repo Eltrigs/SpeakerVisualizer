@@ -1,16 +1,8 @@
 ﻿#pragma once
 #include "audio_displayer.h"
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <portaudio.h>
-#include <cstring>
 #include <iostream>
 #include <thread>
 #include <vector>
-#include <cstdlib>
-#include <cmath>
-#include <algorithm>
 
 
 AudioDisplayer::AudioDisplayer() : recorder()

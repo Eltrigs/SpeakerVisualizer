@@ -4,7 +4,6 @@
 #include <Audioclient.h>
 #include <Audiopolicy.h>
 #include <Mmdeviceapi.h>
-
 #include <chrono>
 #include <iostream>
 #include <thread>
