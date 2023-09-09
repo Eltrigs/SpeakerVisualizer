@@ -5,10 +5,6 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeakerVisualizer", "SpeakerVisualizer\SpeakerVisualizer.vcxproj", "{208ED634-D246-42E6-850E-BC837A091403}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintMMDevices", "PrintMMDevices\PrintMMDevices.vcxproj", "{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackOverflowExample", "StackOverflowExample\StackOverflowExample.vcxproj", "{39ADDFBC-955F-471B-8CE6-EC809E3FE030}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -25,22 +21,6 @@ Global
 		{208ED634-D246-42E6-850E-BC837A091403}.Release|x64.Build.0 = Release|x64
 		{208ED634-D246-42E6-850E-BC837A091403}.Release|x86.ActiveCfg = Release|Win32
 		{208ED634-D246-42E6-850E-BC837A091403}.Release|x86.Build.0 = Release|Win32
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Debug|x64.ActiveCfg = Debug|x64
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Debug|x64.Build.0 = Debug|x64
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Debug|x86.ActiveCfg = Debug|Win32
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Debug|x86.Build.0 = Debug|Win32
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Release|x64.ActiveCfg = Release|x64
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Release|x64.Build.0 = Release|x64
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Release|x86.ActiveCfg = Release|Win32
-		{74AFAFD7-3A1E-4FC4-94E3-61782F7AF400}.Release|x86.Build.0 = Release|Win32
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Debug|x64.ActiveCfg = Debug|x64
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Debug|x64.Build.0 = Debug|x64
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Debug|x86.ActiveCfg = Debug|Win32
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Debug|x86.Build.0 = Debug|Win32
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Release|x64.ActiveCfg = Release|x64
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Release|x64.Build.0 = Release|x64
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Release|x86.ActiveCfg = Release|Win32
-		{39ADDFBC-955F-471B-8CE6-EC809E3FE030}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
