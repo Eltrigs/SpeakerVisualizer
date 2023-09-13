@@ -9,23 +9,25 @@
 #include <thread>
 
 // Define IIDs for initialization
+// This is required to find memory addresses for COM objects
 const CLSID CLSID_MMDeviceEnumerator = __uuidof(MMDeviceEnumerator);
 const IID IID_IMMDeviceEnumerator = __uuidof(IMMDeviceEnumerator);
 const IID IID_IAudioClient = __uuidof(IAudioClient);
 const IID IID_IAudioCaptureClient = __uuidof(IAudioCaptureClient);
 
-
+// The constructor initializes the recording. I.e. it 
 AudioRecorder::AudioRecorder() {
     m_hr = S_OK;
     m_audio_client = nullptr;
 
-    // Initialize audio device endpoint
+    // Initialize audio device endpoint, this is required for every COM object
     CoInitialize(nullptr);
     m_hr = CoCreateInstance(
         CLSID_MMDeviceEnumerator, nullptr,
         CLSCTX_ALL, IID_IMMDeviceEnumerator,
         (void**)&m_device_enumerator);
 
+    //Get the address of the currently active audio device e.g. speaker 1 and save the address to m_audio_device_endpoint
     if (m_hr == S_OK && m_device_enumerator) {
         m_hr = m_device_enumerator->GetDefaultAudioEndpoint(eRender, eConsole, &m_audio_device_endpoint);
     }
@@ -121,6 +123,6 @@ void AudioRecorder::record(AudioSink* audio_sink, std::atomic_bool& exit_flag) c
             m_hr = m_capture_client->ReleaseBuffer(num_frames_available);
             m_hr = m_capture_client->GetNextPacketSize(&packet_length);
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(sleep_time));
+        std::this_thread::sleep_for(std::chrono::microseconds(this->sleep_time));
     }
 }

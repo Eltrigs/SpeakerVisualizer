@@ -30,7 +30,7 @@ private:
     IMMDevice* m_audio_device_endpoint = nullptr;
     IAudioClient* m_audio_client = nullptr;
     IAudioCaptureClient* m_capture_client = nullptr;
-    int m_num_channels;
+    int m_num_channels = 0;
 
-    static const int sleep_time = 10; // Time spent sleeping tp wait for new packets
+    static const int sleep_time = 100; // Time spent sleeping tp wait for new packets
 };

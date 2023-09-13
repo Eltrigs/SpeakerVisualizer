@@ -3,18 +3,18 @@
 
 #include "audio_displayer.h"
 
-constexpr int sleep_time = 20;
+constexpr int sleep_time_us = 100;
 
 int main()
 {
-	AudioDisplayer printer;
+	AudioDisplayer displayer = AudioDisplayer();
 
-	bool continue_app = printer.init_successful();
+	bool continue_app = displayer.init_successful();
 
 	while (continue_app)
 	{
-		continue_app = printer.update();
-		std::this_thread::sleep_for(std::chrono::milliseconds(sleep_time));
+		continue_app = displayer.update();
+		std::this_thread::sleep_for(std::chrono::microseconds(sleep_time_us));
 	}
 
 	return 0;

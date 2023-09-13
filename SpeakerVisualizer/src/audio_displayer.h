@@ -33,6 +33,7 @@ public:
 
 private:
 
+    //This class needs its own recorder instance in order to use shared memory for data
     AudioRecorder recorder;
     std::thread recording_thread;
     std::atomic_bool exit_recording_thread_flag = false;
